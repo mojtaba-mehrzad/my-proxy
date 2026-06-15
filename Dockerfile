@@ -1,3 +1,3 @@
 FROM ghcr.io/xtls/xray-core:latest
-COPY config.json /usr/local/etc/xray/config.json
-ENTRYPOINT ["/usr/bin/xray", "-config", "/usr/local/etc/xray/config.json"]
+COPY config.json /etc/xray/config.json
+CMD ["/usr/bin/xray", "run", "-config", "/etc/xray/config.json"]
